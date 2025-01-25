@@ -9,12 +9,6 @@
       }
     }
   ],
-  "functions": {
-    "index.js": {
-      "maxDuration": 10, 
-      "memory": 512
-    }
-  },
   "env": {
     "PLAYWRIGHT_BROWSERS_PATH": "0"
   }
