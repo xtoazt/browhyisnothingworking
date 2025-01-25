@@ -1,14 +1,15 @@
 const { chromium } = require('@playwright/test');
 
-(async () => {
+export default async function handler(req, res) {
   const browser = await chromium.launch({
-    headless: true, // Run in headless mode
-    channel: 'chrome', // Use Chrome browser
+    headless: true,
+    channel: 'chrome',
   });
 
   const page = await browser.newPage();
   await page.goto('https://example.com');
-  console.log('Page Title:', await page.title());
+  const title = await page.title();
 
   await browser.close();
-})();
+  res.status(200).json({ title });
+}
