@@ -1,0 +1,11 @@
+{
+  "name": "playwright-chrome-project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.37.0"
+  }
+}
